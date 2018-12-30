@@ -1,0 +1,17 @@
+<div class="sidenav">
+  <a *ngFor="let experiment of experiments" class="col-1-4"
+      routerLink="/detail/{{experiment.id}}">
+    <div class="module hero">
+      <h4>{{experiment.name}}</h4>
+    </div>
+  </a>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/labo">Heroes</a>
+  </nav>
+</div>
+
+<div class="main">
+  <h2>My Experiments</h2>
+  <app-experiment-detail [experiment]="selectedExp"></app-experiment-detail>
+</div>
